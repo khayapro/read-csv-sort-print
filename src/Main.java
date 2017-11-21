@@ -1,6 +1,6 @@
-import model.Trade;
-import service.CSVTradeReader;
-import service.TradeReader;
+import main.java.model.Trade;
+import main.java.service.CSVTradeReader;
+import main.java.service.TradeReader;
 import java.io.IOException;
 import java.util.List;
 

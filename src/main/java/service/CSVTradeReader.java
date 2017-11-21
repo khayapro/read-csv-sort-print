@@ -1,10 +1,9 @@
-package service;
+package main.java.service;
 
-import Utils.SortUtils;
-import model.Trade;
+import main.java.Utils.SortUtils;
+import main.java.model.Trade;
 
 import java.io.BufferedReader;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -16,15 +15,15 @@ import java.util.List;
  */
 public class CSVTradeReader implements TradeReader {
 
-    private static final String CSV_FILE_PATH = "C:\\Users\\khaya.mathebula\\Desktop\\trades.csv";
+    private static final String CSV_FILE_PATH = "src\\trades.csv";
     private static final String DELIMETER = ",";
 
     @Override
     public List<Trade> getTrades() throws IOException {
-        return readTradeFile();
+        return readCSVTradeFile();
     }
 
-    private List<Trade> readTradeFile() throws IOException {
+    private List<Trade> readCSVTradeFile() throws IOException {
         final List<Trade> trades = new ArrayList<>();
         try (BufferedReader reader = new BufferedReader(new FileReader(CSV_FILE_PATH))){
             String line;
@@ -38,8 +37,8 @@ public class CSVTradeReader implements TradeReader {
     }
 
     /**
-     * Creating a instance of Trade per line read
-     * @param values - attributes to instantiate a Trade instance
+     * Creating an instance of a Trade per line read
+     * @param values - attributes required to instantiate a Trade instance
      * @return Trade
      */
     private Trade createTrade(String[] values){

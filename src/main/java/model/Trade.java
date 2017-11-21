@@ -1,6 +1,4 @@
-package model;
-
-import java.util.Comparator;
+package main.java.model;
 
 /**
  * Created by khaya.mathebula on 20/11/2017.
@@ -44,7 +42,7 @@ public class Trade  {
 
     @Override
     public String toString() {
-        return "model.Trade{" +
+        return "main.java.model.Trade{" +
                 "code='" + code + '\'' +
                 ", price=" + price +
                 ", quantity=" + quantity +

@@ -1,8 +1,8 @@
-package service;
+package main.java.service;
 
 import java.io.IOException;
 import java.util.List;
-import model.Trade;
+import main.java.model.Trade;
 
 /**
  * Created by khaya.mathebula on 21/11/2017.
